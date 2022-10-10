@@ -18,7 +18,7 @@ const Header = () => {
                     className="mr-3 h-6 sm:h-9"
                     alt="Quiz Master Logo"
                 />
-                <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+                <span className="self-center whitespace-nowrap text-xl font-bold text-blue-600 dark:text-blue-500">
                     Quiz Master
                 </span>
             </Navbar.Brand>
