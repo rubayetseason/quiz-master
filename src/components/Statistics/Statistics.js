@@ -8,7 +8,7 @@ const Statistics = () => {
     console.log(bardata);
     return (
         <div>
-            <hr className='border-2 border-blue-600 my-8 mx-auto w-9/12' />
+            <hr className='border-2 border-blue-600 my-9 mx-auto w-9/12' />
 
             <div className='question'>
                 <div className='question-container'>
