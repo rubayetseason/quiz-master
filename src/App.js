@@ -7,6 +7,8 @@ import Statistics from './components/Statistics/Statistics'
 import Blog from './components/Blog/Blog'
 import Contact from './components/Contact/Contact';
 import NF from './components/NF/NF';
+import Quiz from './components/Quiz/Quiz';
+
 
 function App() {
   const router = createBrowserRouter([
@@ -18,6 +20,13 @@ function App() {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
           element: <Home></Home>
+        },
+        {path: '/:QId',
+loader: async ({params}) => {
+return fetch(`https://openapi.programming-hero.com/api/quiz/${params.QId}`)
+},
+
+ element: <Quiz></Quiz>
         },
         {
           path: '/statistics', element: <Statistics></Statistics>

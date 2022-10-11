@@ -1,9 +1,10 @@
 import { Button, Card } from 'flowbite-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Quizes = ({ quiz }) => {
     console.log(quiz);
-    const { name, logo, total } = quiz;
+    const { id, name, logo, total } = quiz;
     return (
         <div className="w-full p-7">
             <Card>
@@ -14,9 +15,11 @@ const Quizes = ({ quiz }) => {
                 <p className="font-medium text-gray-700 dark:text-gray-400">
                     Total questions : {total}
                 </p>
-                <button className='bg-blue-600 p-2 text-white font-semibold'>
-                    Enter Quiz
-                </button>
+                <Link to={`/${id}`} className='bg-blue-600 hover:bg-blue-800 p-2 text-white font-semibold'>
+                    <button >
+                        Enter Quiz
+                    </button>
+                </Link>
             </Card>
         </div>
     );
