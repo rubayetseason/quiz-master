@@ -1,22 +1,27 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from "recharts";
-
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import './Statistics.css'
 const Statistics = () => {
     const data = useLoaderData();
     const bardata = data.data;
     console.log(bardata);
     return (
         <div>
-            <h1>this is stat</h1>
-            <div className='w-3/6 mx-auto'>
-            <LineChart width={500} height={400} data={bardata}>
-           <Line type="monotone" dataKey="total" stroke='#82ca9d' />
-           <XAxis dataKey="name" />
-           <YAxis/>
-           <Tooltip></Tooltip>
-            </LineChart>
-        </div>
+            <hr className='border-2 border-blue-600 my-8 mx-auto w-9/12' />
+
+            <div className='question'>
+                <div className='question-container'>
+                    <ResponsiveContainer width="100%" height="100%">
+                        <LineChart width={500} height={400} data={bardata}>
+                            <Line type="monotone" dataKey="total" stroke='#82ca9d' />
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <Tooltip></Tooltip>
+                        </LineChart>
+                    </ResponsiveContainer>
+                </div>
+            </div>
         </div>
     );
 };
