@@ -21,12 +21,13 @@ function App() {
           },
           element: <Home></Home>
         },
-        {path: '/:QId',
-loader: async ({params}) => {
-return fetch(`https://openapi.programming-hero.com/api/quiz/${params.QId}`)
-},
+        {
+          path: '/:QId',
+          loader: async ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.QId}`)
+          },
 
- element: <Quiz></Quiz>
+          element: <Quiz></Quiz>
         },
         {
           path: '/statistics', loader: async () => {

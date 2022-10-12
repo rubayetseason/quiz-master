@@ -5,7 +5,6 @@ import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 const Statistics = () => {
     const data = useLoaderData();
     const bardata = data.data;
-    console.log(bardata);
     return (
         <div>
             <hr className='border-2 border-blue-600 my-8 mx-auto w-3/4' />

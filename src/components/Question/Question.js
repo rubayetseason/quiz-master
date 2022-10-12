@@ -1,7 +1,7 @@
 import React from 'react';
 import Option from '../Option/Option';
 import Swal from 'sweetalert2';
-import { BeakerIcon, EyeIcon } from '@heroicons/react/24/solid'
+import { EyeIcon } from '@heroicons/react/24/solid'
 
 const Question = ({ singleQuestion }) => {
     const q = singleQuestion;
@@ -36,7 +36,7 @@ const Question = ({ singleQuestion }) => {
         <div className='my-8 p-4 border-2 border-black rounded w-4/5 mx-auto'>
             <div className='flex justify-evenly'>
                 <h1 className='text-xl mb-2'><span className='font-bold underline'>Question:</span> {question.slice(3, -4)}</h1>
-                <EyeIcon className="h-6 w-6 text-blue-500 hover:cursor-pointer" onClick={eye} />
+                <EyeIcon className="h-6 w-6  text-blue-500 hover:cursor-pointer" onClick={eye} />
 
             </div>
             <div className="options">
